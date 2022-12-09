@@ -6,11 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserService {
+public class UserServiceImpl implements UserService {
     @Autowired
     UserDAO userDAO;
 
-    public UserVO getUserDAO(UserVO vo) {
+    public UserVO getUser(UserVO vo) {
         return userDAO.getUser(vo);
     }
 }
